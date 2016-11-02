@@ -1,0 +1,87 @@
+acme_user_homepage:
+    path:     /
+    defaults: { _controller: AcmeUserBundle:Default:index }
+
+fos_user_security_login:
+    defaults: { _controller: AcmeUserBundle:Security:login }
+    pattern: /login
+
+fos_user_security_check:
+    pattern: /login_check
+    defaults: { _controller: AcmeUserBundle:Security:check }
+
+fos_user_security_logout:
+    pattern: /logout
+    defaults: { _controller: AcmeUserBundle:Security:logout }
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /members/profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /members/register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /members/resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /members/
+
+my_profile:
+    path:     /profile
+    defaults: { _controller: AcmeUserBundle:User:Profile }
+    
+user_profile:
+    path:     /users/profile_{id}
+    defaults: { _controller: AcmeUserBundle:User:userProfile }
+
+fileEdit:
+    path: /profile/image/edit
+    defaults:  { _controller: AcmeUserBundle:User:fileEdit }
+
+my_profile_ajax:
+    path:     /profile_{value}_{champ}
+    defaults: { _controller: AcmeUserBundle:User:editProfileAjax }
+    options:
+        expose: true
+
+my_setting:
+    path:     /setting
+    defaults: { _controller: AcmeUserBundle:User:settingProfile }
+
+locked_my_account:
+    path:     /locked_my_account
+    defaults: { _controller: AcmeUserBundle:User:lockedMyAccount }
+    
+editRenseignements:
+    path:     /editRenseignements_{name}_{value}
+    defaults: { _controller: AcmeUserBundle:User:editRenseignements }
+    options:
+        expose: true   
+
+fos_user_registration_confirmed:
+    pattern: /registration/confirmed
+    defaults: { _controller: AcmeUserBundle:User:confirmed }
+    requirements:
+        _method: GET
+              
+verifierEmail:
+    path:     /verifierEmail_{id}
+    defaults: { _controller: AcmeUserBundle:User:verifierEmail }      
+    
+sendVerifierEmail:
+    path:     /sendVerifierEmail_{id}
+    defaults: { _controller: AcmeUserBundle:User:sendVerifierEmail }
+    options:
+        expose: true   
+
+phoneVerified:
+    path: /phoneverified
+    defaults:  { _controller: AcmeUserBundle:User:phoneVerified }
+
+phoneVerifiedSubmit:
+    path: /phoneverifiedsubmit
+    defaults:  { _controller: AcmeUserBundle:User:phoneVerifiedSubmit }

@@ -1,0 +1,7 @@
+acme_front_homepage:
+    path:     /
+    defaults: { _controller: AcmeFrontBundle:Front:index }
+
+user_login:
+    path: /login
+    defaults: { _controller: AcmeUserBundle:Security:login }

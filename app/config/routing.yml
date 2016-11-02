@@ -1,0 +1,13 @@
+acme_user:
+    resource: "@AcmeUserBundle/Resources/config/routing.yml"
+    prefix:   /account
+
+acme_front:
+    resource: "@AcmeFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+easy_admin_bundle:
+    #resource: "@EasyAdminBundle/Controller/"
+    resource: "@AcmeBackBundle/controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin

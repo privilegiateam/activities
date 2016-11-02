@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    {% include 'include/head.html.twig' %}
+     <head>
+
+         {% block title %} <title></title>{% endblock %}
+
+    {% block stylesheets %}
+    {% endblock %}
+    </head>
+    <body class="homepage">
+
+        <div class="main-page">
+            {% include 'include/header.html.twig' %}
+            {% block body %}
+
+            {% endblock %}
+
+            {% include 'include/footer.html.twig' %}
+
+        </div>
+
+        {% include 'include/script.html.twig' %}
+
+        {% block javascripts %}
+
+        {% endblock %}
+    </body>
+</html>

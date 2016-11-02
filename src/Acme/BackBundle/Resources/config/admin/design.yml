@@ -1,0 +1,24 @@
+easy_admin:
+
+    site_name: 'Administration'
+
+    list:
+        actions:
+            - { name: 'show', icon: 'search', label: '' }
+            - { name: 'edit', icon: 'pencil', label: '' }
+            - { name: 'delete', icon: 'trash', label: '' }
+        max_results: 30
+
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i'
+
+    design:
+        form_theme:   'vertical'
+        color_scheme: 'dark'
+        brand_color: '#2c3e50'
+        assets:
+            css:
+                - '/bundles/outchi/backend/stylesheets/main.css'
+                - '/bundles/outchi/backend/stylesheets/style.css'

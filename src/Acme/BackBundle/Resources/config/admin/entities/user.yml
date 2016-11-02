@@ -1,0 +1,16 @@
+easy_admin:
+    entities:
+        User:
+            class: Acme\UserBundle\Entity\User
+            label: 'Utilisateurs'
+            list:
+                title: "Liste des utilisateurs :"
+                fields: ['id', 'email',  { property: 'enabled', type: 'toggle' }, 'lastLogin']
+            form:
+                fields:
+                    - { property: 'id', css_class: 'col-sm-1 large', label: 'ID', help: "(ID de l'utilisateur)." , type: 'hidden' }
+                    - { property: 'email',  css_class: 'col-sm-3 large', label: 'Email', help: "(L'Email de l'utilisateur)."}
+                    - { property: 'enabled', css_class: 'col-sm-3 large', label: ' Activer/Désactiver le compte ', help: "enabled"}
+
+
+

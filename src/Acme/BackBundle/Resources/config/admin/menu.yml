@@ -1,0 +1,10 @@
+easy_admin:
+    design:
+        menu:
+            - { label: 'Utilisateurs', icon: 'user', entity: 'User' }
+
+            - label: 'A propos'
+              children:
+                - { label: 'Website outchi', url: '#' }
+                - { label: 'Help', url: '#' }
+                - { label: 'Docs', url: '#' }
